@@ -9,11 +9,19 @@ body {
 
 /*Encabezado*/
 header {
-    background: #1b6342;
-    color: white;
+    background: #b3ead3;
+    color: rgb(6, 71, 25);
     text-align: center;
     padding: 20px;
     margin: 20px;
+
+}
+
+header img {
+    max-width: 100%;
+   max-height: 100%;
+   height: auto;
+   width: auto;
 }
 
 /*Navegación*/
@@ -23,12 +31,17 @@ nav{
 }
 nav ul{
     padding: 0;
-    text-align: center;
+    display: flex; /**/
+    flex-direction: row; /*como quiero acomodar, columna, fila*/
+    justify-content: space-around; /*distribuye de acuerdo al espacio entre los elementos*/
+    align-items: center; /*de acuerdo a como pedi que este en flex-direction, como quiero que se ubiquen*/
 }
 nav ul li {
-    display: inline;
+    /*display: inline;  /*para que no aparezcan los puntos de la lista*/
+    list-style-type: none;  /*otra forma para que no aparezcan los puntitos*/
     margin: 0 15%;
 }
+
 nav ul li a {
     color: rgb(3, 3, 3);
     text-decoration: none;
@@ -37,23 +50,24 @@ nav ul li a {
 /*contenido principal*/
 main {
     display: flex;
-    flex-wrap:wrap-reverse;
+    flex-wrap:wrap-reverse; /*acomoda de acuerdo al lugar que tengan*/
     justify-content:space-around;
     padding: 20px;
 }
 
-section nosotros {
+ .Nosotros { /*esto es una clase, nos sirve para replicar el estilo solo nombrando la clase sin copiar y pegar*/
     flex: 2;
-    background: rgb(187, 227, 210);
+    background: rgb(187, 227, 210);  /*color de fondo*/
     padding: 20px;
     margin: 10px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgb(0, 0,0.1);
+    
 }
 
 section{
     flex: 2;
-    background: white;
+    background: rgb(203, 243, 206);
     padding: 20px;
     margin: 10px;
     border-radius: 5px;
@@ -63,7 +77,7 @@ section{
 /*Barra Lateral*/
 aside {
     flex: 0.5;
-    background: #ddd;
+    background: #85d68d;
     padding: 20px;
     margin: 10px;
     border-radius: 5px;
