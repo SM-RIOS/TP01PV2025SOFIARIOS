@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     
 </head>
 <body>
-    
+    <header>
     <h1>CONTACTO </h1>
+
+
+</header>
+
+<div class="container"><img src="https://img.freepik.com/premium-vector/made-ireland-isolated-round-stamp-sticker-sign-with-irish-flag-shamrock-vector-illustration_723710-1357.jpg?semt=ais_hybrid&w=740"  alt="paisaje de irlanda" class="logo" ></div>
     <nav>
         <ul>
             <li><a href="http://127.0.0.1:5500/index.html#Nosotros">Nosotros</a></li>
@@ -18,28 +23,54 @@
         </ul>
     </nav>
 
-       <label> <b>REGISTRO</b></label>
+       <h2> <b>REGISTRO DE DATOS</b></h2>
         <p>Por favor, dejenos los siguientes datos y un asesor se pondrá en contacto con usted</p>
-    <form action="#" method="post">
-        <label for="Apellido">Apellido</label>
-        <input type="text" id="Apellido" required> <br>
-        <br>
-        <label for="Nombre">Nombre</label>
-        <input type="text" id="Nombre" required> <br>
-        <br>
-        <label for="Telefono">Teléfono</label>
-        <input type="number" id="Telefono" > <br>
-        <br>
-        <label for="Correo">Correo</label>
-        <input type="email" id="Correo" required> <br>
-        <input type="submit">
-        <br>
-    </form>
+    <main>
+    <div class="formulario">
+        <form id="contact-form">
+            <label for="Apellido">Apellido</label>
+            <input type="text" id="Apellido" required> <br>
+            <br>
+            <label for="Nombre">Nombre</label>
+            <input type="text" id="Nombre" required> <br>
+            <br>
+            <label for="Telefono">Teléfono</label>
+            <input type="number" id="Telefono" > <br>
+            <br>
+            <label for="Correo">Correo</label>
+            <input type="email" id="Correo" required> <br>
+            <br>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea> <br>
+            <!-- /*<input type="submit"> -->
+            <button type="submit" onclick="enviarFormulario()" >Enviar </button>
+            <br>
+
+        </form>
+    </div>
+    </main>
     <aside>
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREHsczR6uBwoXYDvZLZk7KTzda7eGh6v_RPg&s" />
     </aside>
     <footer id="Contacto">
         <p> <small>&copy; 2025 Pagina Ficticia S.A. - Todos los derechos reservados </small></p>
     </footer>
+
+    <script>
+        /*funcion que se ejecuta cuando se hace click en el boton */
+        function enviarFormulario() {
+            event.preventDefault();
+
+            /*obtener valores de los inputs*/
+           
+            var Nombre=document.getElementById("Nombre").value;
+            var Apellido=document.getElementById("Apellido").value;
+
+             /*Mostrar valores de la consola*/
+            console.log("Nombre:", Nombre);
+            console.log("Apellido:", Apellido);
+            alert("Nombre: "+Nombre+" y Apellido: "+Apellido);
+        }
+    </script>
 </body>
 </html>
